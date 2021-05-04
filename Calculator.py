@@ -1,66 +1,66 @@
-import os                                                               # importing os to clear the screen for second calculation
+import os                                                               
 
-print("Hi I'm a calculater\n\n")
+print("Hi I'm a calculator\n\n")
 
 
-def calculate():                                                        # function which except values and calculate accordingly
+def calculate():                                                        
 
-    try:                                                                # Getting first value
-        a = int(input('what is your first value\n'))
+    try:                                                                
+        a = float(input('what is your first value\n'))
                                                                                 
-    except ValueError:                                                  # excepting Errors
+    except ValueError:                                                  
         print("\nOops!  That was no valid number.  Try again...")
         a = float(input('\n\nwhat is your first value\n'))
     
     
     try:
-        b = float(input('\nwhat is your second value\n'))               # Getting second value
-    except ValueError:                                                  # excepting Errors
+        b = float(input('\nwhat is your second value\n'))               
+    except ValueError:                                                  
         print("\nOops!  That was no valid number.  Try again...")
         b = float(input('\n\nwhat is your first value\n'))
 
-    expression = input('\nWhat is the expression\n')                    # Getting operations to calculate
+    expression = input('\nWhat is the expression\n')                    
 
-    if expression == '+':                                               # Addition
+    if expression == '+':                                               
         answer = str(a + b)
         print('answer = ' + answer)
 
-    elif expression == '-':                                             # Substraction
+    elif expression == '-':                                             
         answer = str(a - b)
         print('answer = ' + answer)
 
-    elif expression == '*':                                             # Multiplication
+    elif expression == '*':                                             
         answer = str(a * b)
         print('answer = ' + answer)
 
-    elif expression == '**':                                            # Exponent
+    elif expression == '**':                                            
         try:
             answer = str(a ** b)
             print('answer = ' + answer)
         except OverflowError:
             print("\nOops!  That was a really big number. Sorry...")
 
-    elif expression == '/':                                             # Division
+    elif expression == '/':                                            
         answer = str(a / b)
         print('answer = ' + answer)
 
-    elif expression == '//':                                            # Interger Division
+    elif expression == '//':                                            
         answer = str(a // b)
         print('answer = ' + answer)
 
 
-    next = input("\n\nWana find another one??  y/n\n")                    # Asking If the user want's to continue or exit 
+    next = input("\n\nWana find another one??  y/n\n")                     
     
     if next == 'y' or next == 'yes':
-        cls()                                                           # Clearing the screen
+        cls()                                                           
 
     else:
-        exit()                                                          # Killing the code
+        exit()                                                          
 
-def cls():                                                              # clearing the screen function
+def cls():                                                              
     os.system("CLS")
 
 
 if __name__ == '__main__':
     while True:
-        calculate()                                                     # Calling function Calculate
+        calculate()                                                     
