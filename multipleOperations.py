@@ -6,8 +6,8 @@ def inputValue():
         num2 = int(input("\nPlease enter the second number\n"))
 
     except ValueError:
-        print("\nPlease enter a number")
-        input()
+        os.system("CLS")
+        print("ValueError...\n")
         inputValue()
         os.system("CLS")
 
@@ -18,6 +18,8 @@ def inputValue():
     print('Square of number 1 : ', num1**2)
     print('Square of number 2 : ', num2**2)
 
+
+    input()
     os.system("CLS")
 
 while True:
