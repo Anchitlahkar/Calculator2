@@ -11,7 +11,6 @@ user_info = {
 
 user_Query =[]
 user_full_data =[]
-print(len(user_info))
 
 for i in user_info:
     user_info[i] = input('Please Enter Your '+ i+'  ')
